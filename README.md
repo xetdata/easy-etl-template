@@ -6,9 +6,10 @@ The templated version of our [Easy ETL example](https://github.com/xetdata/easy-
 Configuring the repo:
 1. Click `Use this Template`, and select `Create a new repository`.
 2. Fill out the repository information and click `Create Repository`.
-3. Add write permissions to Actions. This enables the pipeline to check the files back into the repo. Click on the repo Settings. Select `Actions` and `General`. Scroll down to `Workflow permissions`, and select `Read and write permissions`. Click `Save`.
+3. Add write permissions to Actions. This enables the pipeline to check the files back into the repo. To do so, click on the repo Settings. Select `Actions` and `General`. Scroll down to `Workflow permissions`, and select `Read and write permissions`. Click `Save`.
 4. Follow the instructions at [XetData integration for GitHub](https://github.com/apps/xetdata) and install the app to your new repo
-5. Edit `.github/workflows/etl-action.yml` and remove the comments from the schedule section. Set `AUTOMATION_USERNAME` to a good username and `AUTOMATION_EMAIL` to a good email address.
+5. Edit `.github/workflows/etl-action.yml` and remove the comments from the schedule section (lines 8-10). 
+6. In `.github/workflows/etl-action.yml`, set `AUTOMATION_USERNAME` to a good username and `AUTOMATION_EMAIL` to a good email address (lines 5 and 6).
 
 Making it your own:
 1. Edit `src/pipeline.py` and replace the code in `extract()` with your own ETL code.
